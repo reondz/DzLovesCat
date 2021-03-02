@@ -63,7 +63,13 @@ class DogDetailActivity : AppCompatActivity() {
 
                     Spacer(Modifier.width(60.dp))
 
-                    Button(onClick = { Toast.makeText(applicationContext, "You've adopted ${dog.name}!!", Toast.LENGTH_SHORT)}) {
+                    Button(
+                        Toast.makeText(
+                            applicationContext,
+                            "You've adopted ${dog.name}!!",
+                            Toast.LENGTH_SHORT)::show
+                    )
+                    {
                         Text("Adopt ${dog.name}")
                     }
                 }
@@ -72,7 +78,6 @@ class DogDetailActivity : AppCompatActivity() {
                 
                 Text(text = "Introduce of ${dog.name}:")
                 Text(text = dog.desc)
-                
             }
         }
     }
