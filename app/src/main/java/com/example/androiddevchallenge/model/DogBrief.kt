@@ -24,12 +24,12 @@ data class DogBrief(
     val age: Int,
     val breed: String,
     val gender: Gender,
-    val desc: String = ""): Serializable
+    val desc: String = ""
+) : Serializable
 
 enum class Gender {
     Female, Male
 }
-
 
 fun Gender.getString(): String {
     return if (this == Gender.Female) {
